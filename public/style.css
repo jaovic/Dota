@@ -6,15 +6,17 @@ body {
   align-items: center;
   align-content: center;
   justify-content: center;
+  background-image: url(./imagens/64bb7e1887510c8bbcd0cbb0fbcefeec.jpg);
 }
 .form {
   position: absolute;
-  background-color: rgba(53, 43, 192, 0.8);
+  background-color: rgba(145, 18, 18, 0.9);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 15px;
   padding: 15px;
+  border: 1px solid black;
 }
 form {
   display: flex;
@@ -38,8 +40,11 @@ button {
   justify-content: center;
   align-content: center;
   margin: 10px;
-  padding: 10px;
+  padding: 30px;
   display: none;
+  border: 1px solid black;
+  background-color: rgba(18, 48, 145, 0.9);
+  border-radius: 15px;
 }
 #center {
   text-align: center;
