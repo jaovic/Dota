@@ -1,15 +1,2 @@
-# Pix Banco do Brasil
-
-Serviço responsável por integrar o pix do Banco do Brasil na Qesh.
-
-OK
-CreatePix
-CreatePixQrCOde
-EditPix
-SearchPix
-
-Pendente
-ConsultaPagBoleto
-SearchBilletsByID
-SearchBillets
-Devolução
+# dota_api
+pagina web para pesquisa de rank de Dota 2 utilizando o OPENAPI da steam
