@@ -9,11 +9,24 @@
   </head>
   <body>
     <div class="form">
-      <form id="form" action="localhost:3000/dota/ranking">
+      <form id="form">
         <label id="label" for="fname">Steam ID 32bits:</label><br />
         <input type="text" id="steam32ID" name="steam32ID" /><br />
-        <input type="submit" value="Submit" />
+        <input type="submit" onclick="searchRank()" value="Submit" />
       </form>
     </div>
+
+    <div id="imagem" display="none">
+      <div>
+        <h2>Ranking:</h2>
+      </div>
+      <div>
+        <img src="./imagens/ancient.png" alt="ancient Logo" />
+      </div>
+      <div>
+        <button>Pesquisar novamente</button>
+      </div>
+    </div>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

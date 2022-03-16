@@ -25,32 +25,42 @@ export default class ApiDotaService {
       if (rank <= 616) {
         const arauto = "Arauto";
 
-        return arauto;
+        return JSON.stringify(arauto);
       }
       if (rank <= 1386) {
         const guardian = "Guardin";
 
-        return guardian;
+        return JSON.stringify(guardian);
       }
       if (rank <= 2156) {
         const cruzado = "Cruzado";
 
-        return cruzado;
+        return JSON.stringify(cruzado);
       }
       if (rank <= 2926) {
         const arconte = "Ancorte";
 
-        return arconte;
+        return JSON.stringify(arconte);
       }
       if (rank <= 3696) {
         const lenda = "Lenda";
 
-        return lenda;
+        return JSON.stringify(lenda);
       }
       if (rank <= 4466) {
         const anciente = "Anciente";
 
-        return anciente;
+        return JSON.stringify(anciente);
+      }
+      if (rank <= 5420) {
+        const divine = "Divine";
+
+        return JSON.stringify(divine);
+      }
+      if (rank > 5420) {
+        const immortal = "Immortal";
+
+        return JSON.stringify(immortal);
       }
     } catch (error) {
       throw new AppError(UNEXPECTED_ERROR, INTERNAL_SERVER_ERROR);
