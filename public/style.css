@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.form {
+  position: absolute;
+  background-color: rgba(53, 43, 192, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 15px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+}
+input {
+  padding: 7px;
+  margin-top: 15px;
+}
