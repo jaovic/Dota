@@ -23,6 +23,7 @@ form {
   flex-direction: column;
   padding: 10px;
   text-align: center;
+  text-align: center;
 }
 input {
   padding: 7px;
@@ -46,6 +47,6 @@ button {
   background-color: rgba(18, 48, 145, 0.9);
   border-radius: 15px;
 }
-#center {
+.center {
   text-align: center;
 }

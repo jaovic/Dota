@@ -6,7 +6,6 @@ import { BASE_URL } from "../../utils/endpoints";
 import config from "../../config/index";
 import { DATA_IS_NULL, UNEXPECTED_ERROR } from "../../error/error";
 import { INTERNAL_SERVER_ERROR, OK } from "../../error/statusCodes";
-import { resolve } from "path";
 
 const requester = axios.create({
   httpsAgent: new https.Agent({
@@ -20,47 +19,32 @@ export default class ApiDotaService {
       console.log(config.KEY);
       const searchRanking_URL = `${BASE_URL}${steam32ID}?api_key=${config.KEY}`;
       const { data } = await requester.get(searchRanking_URL);
+      console.log(data);
       const rank = data.competitive_rank;
       console.log(rank);
       if (rank <= 616) {
-        const arauto = "Arauto";
-
-        return JSON.stringify(arauto);
+        return "Arauto";
       }
       if (rank <= 1386) {
-        const guardian = "Guardin";
-
-        return JSON.stringify(guardian);
+        return "Guardian";
       }
       if (rank <= 2156) {
-        const cruzado = "Cruzado";
-
-        return JSON.stringify(cruzado);
+        return "Cruzado";
       }
       if (rank <= 2926) {
-        const arconte = "Ancorte";
-
-        return JSON.stringify(arconte);
+        return "Ancorte";
       }
       if (rank <= 3696) {
-        const lenda = "Lenda";
-
-        return JSON.stringify(lenda);
+        return "Lenda";
       }
       if (rank <= 4466) {
-        const anciente = "Anciente";
-
-        return JSON.stringify(anciente);
+        return "Anciente";
       }
       if (rank <= 5420) {
-        const divine = "Divine";
-
-        return JSON.stringify(divine);
+        return "Divine";
       }
       if (rank > 5420) {
-        const immortal = "Immortal";
-
-        return JSON.stringify(immortal);
+        return "Immortal";
       }
     } catch (error) {
       throw new AppError(UNEXPECTED_ERROR, INTERNAL_SERVER_ERROR);

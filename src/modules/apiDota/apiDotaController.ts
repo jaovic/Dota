@@ -13,7 +13,8 @@ export default class ApidotaController {
   }
   async searchRankingPlayer(req: Request, res: Response): Promise<any> {
     const { steam32ID } = req.body;
+    console.log(steam32ID);
     const data = await this.apiDotaService.searchRankingPlayer(steam32ID);
-    res.send(data);
+    res.status(201).json(data);
   }
 }

@@ -1,36 +1,33 @@
 const form = document.getElementById("form");
 const formFora = document.querySelector(".form");
-const imagem = document.getElementById("imagem");
 const btn = document.getElementById("btn");
 
-btn.addEventListener("click", function (e) {
+btn.addEventListener("click", async function (e) {
   e.preventDefault();
-  console.log("teste");
   let steam32ID = document.getElementById("steam32ID").value;
-  console.log(steam32ID);
-  // fetch("localhost:3000/dota/ranking", {
-  //   headers: {
-  //     Accept: "application/json",
-  //     "Content-Type": "application/json",
-  //   },
-  //   method: "POST",
-  //   body: JSON.stringify({ steam32ID: steam32ID }),
-  // })
-  //   .then((res) => {
-  //     Console.log(res);
-  //     return res.json();
-  //   })
-  //   .then((json) => {
-  //     const resultado = "";
-  //     if (json === Anciente) {
-  //       resultado = <img src="./imagens/ancient.png" alt="ancient Logo" />;
-  //     }
+  let _steam = { steam32ID: steam32ID };
 
-  //     document.getElementById("imagem").innerHTML = resultado;
+  const resposta = await fetch("http://localhost:3000/dota/ranking", {
+    method: "POST",
+    body: JSON.stringify(_steam),
+    headers: { "Content-type": "application/json" },
+  });
+  const data = await resposta.json();
+  console.log(data);
+
+  const incert = `<div class="center">
+    <h2>Ranking:</h2>
+  </div>
+  <div id="insert"><img src="./imagens/${data}.png" alt="${data} Logo" /></div>
+  <div class="center">
+    <a href="/"><button>Pesquisar novamente</button></a>
+  </div>`;
+
+  const imagem = document.getElementById("imagem");
+  imagem.innerHTML = incert;
+
   form.style.display = "none";
   formFora.style.backgroundColor = "transparent";
   formFora.style.border = "none";
   imagem.style.display = "block";
-  console.log("teste");
-  // });
 });

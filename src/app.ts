@@ -15,6 +15,6 @@ app.use(mainRouter);
 app.use(joiErrorHandler);
 app.use(errorHandler);
 
-app.use("/", express.static(path.join(__dirname, "./public")));
+app.use("/", express.static(path.join(__dirname, "../public")));
 
 export { app };

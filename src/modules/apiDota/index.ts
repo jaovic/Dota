@@ -13,7 +13,7 @@ const apiRoute = Router();
 
 apiRoute.post(
   "/ranking",
-  celebrate({ [Segments.BODY]: validation.apiDotaSchema }),
+  // celebrate({ [Segments.BODY]: validation.apiDotaSchema }),
   (req, res) => apidotaController.searchRankingPlayer(req, res)
 );
 
