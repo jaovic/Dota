@@ -18,7 +18,7 @@ btn.addEventListener("click", async function (e) {
   const incert = `<div class="center">
     <h2>Ranking:</h2>
   </div>
-  <div id="insert"><img src="./imagens/${data}.png" alt="${data} Logo" /></div>
+  <div id="insert"><img src="./imagens/${data}.png"  alt="${data} Logo"/></div>
   <div class="center">
     <a href="/"><button>Pesquisar novamente</button></a>
   </div>`;

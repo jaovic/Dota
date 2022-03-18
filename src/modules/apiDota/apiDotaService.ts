@@ -2,6 +2,7 @@ import axios from "axios";
 import https from "https";
 
 import AppError from "../../error/appError";
+import imagens from "../../../public/imagens/imagens";
 import { BASE_URL } from "../../utils/endpoints";
 import config from "../../config/index";
 import { DATA_IS_NULL, UNEXPECTED_ERROR } from "../../error/error";
