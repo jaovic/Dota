@@ -2,7 +2,6 @@ import axios from "axios";
 import https from "https";
 
 import AppError from "../../error/appError";
-import imagens from "../../../public/imagens/imagens";
 import { BASE_URL } from "../../utils/endpoints";
 import config from "../../config/index";
 import { DATA_IS_NULL, UNEXPECTED_ERROR } from "../../error/error";
@@ -17,12 +16,9 @@ const requester = axios.create({
 export default class ApiDotaService {
   async searchRankingPlayer(steam32ID: string) {
     try {
-      console.log(config.KEY);
       const searchRanking_URL = `${BASE_URL}${steam32ID}?api_key=${config.KEY}`;
       const { data } = await requester.get(searchRanking_URL);
-      console.log(data);
       const rank = data.competitive_rank;
-      console.log(rank);
       if (rank <= 616) {
         return "Arauto";
       }
